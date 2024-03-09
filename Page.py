@@ -11,9 +11,14 @@ class Page:
         self.id = str(uuid.uuid4())
         self.path = path
         self.lang = lang
-        self.image = cv2.imread(self.path)
-        self.height = self.image.shape[0]
-        self.width = self.image.shape[1]
+        try:
+            self.image = cv2.imread(self.path)
+            self.height = self.image.shape[0]
+            self.width = self.image.shape[1]
+        except Exception as e:
+            self.image = None
+            self.height = 0
+            self.width = 0
 
     def text_cutout(self, cordx1, cordx2, cordy1, cordy2):
         self.image = self.image[cordy1:cordy2, cordx1:cordx2]
