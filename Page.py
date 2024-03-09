@@ -3,7 +3,7 @@ import pytesseract
 import uuid
 
 
-pytesseract.pytesseract.tesseract_cmd = r'H:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\chope\Desktop\Tesseract\tesseract.exe'
 
 
 class Page:
@@ -21,9 +21,9 @@ class Page:
         self.width = self.image.shape[1]
 
     def extract_text(self):
+        print(pytesseract.image_to_string(self.image, lang=self.lang, config='--psm 6'))
         return pytesseract.image_to_string(self.image, lang=self.lang, config='--psm 6')
 
     def review_text(self):
         #add review function using chosen API later
         return 0
-
