@@ -1,6 +1,8 @@
 import cv2
 import pytesseract
 import uuid
+import requests
+import json
 
 
 pytesseract.pytesseract.tesseract_cmd = r'H:\Program Files\Tesseract-OCR\tesseract.exe'
@@ -29,6 +31,19 @@ class Page:
         return pytesseract.image_to_string(self.image, lang=self.lang, config='--psm 6')
 
     def review_text(self):
-        #add review function using chosen API later
-        return 0
+        with open("KEYS.txt", "r") as KEYS:
+            key = KEYS.read().split(r"\n")[0]
+        headers = {
+            "Authorization": f"Bearer {key}"}
+        text = self.extract_text()
+        url = "https://api.edenai.run/v2/text/spell_check"
+        payload = {
+            "providers": "openai,microsoft",
+            "language": "en",
+            "text": f"{text}",
+            "fallback_providers": "",
+        }
+        response = requests.post(url, json=payload, headers=headers)
+        result = json.loads(response.text)
+        print(result)
 
