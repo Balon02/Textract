@@ -3,7 +3,7 @@ import customtkinter as ctk
 import pyperclip
 import keyboard
 import time
-from cos import extract_text_from_clipboard
+from Page import clipboard_to_string
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -13,7 +13,7 @@ class App(ctk.CTk):
         self.grid_columnconfigure(0, weight=1)
 
         self.text_var = tk.StringVar()
-        self.text_var.set("Hello World")
+        self.text_var.set("Tutaj Wyświetli się tekst z obrazu")
         self.textbox = ctk.CTkTextbox(master=self, width=590, height=300, font=("Arial", 12),corner_radius=0)
         self.textbox.grid(row=0, column=0, padx=20, pady=20)
         self.textbox.insert("0.0",f"{self.text_var.get()}")
@@ -30,7 +30,7 @@ class App(ctk.CTk):
     def shortcut_press(self, event):
         try:
             time.sleep(5)
-            result_text = extract_text_from_clipboard()
+            result_text = clipboard_to_string()
             self.text_var.set(result_text)
             self.textbox.delete("0.0", tk.END)
             self.textbox.insert("0.0", f"{self.text_var.get()}")
