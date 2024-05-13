@@ -3,5 +3,6 @@ import pytesseract
 import os
 from gui import App
 
-app = App()
-app.mainloop()
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
