@@ -15,7 +15,7 @@ Text Extractor is a handy utility that allows users to select an area on their m
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/Balon02/TextExtractor.git
+    git clone https://github.com/Balon02/Textract.git
     cd TextExtractor
     ```
 
