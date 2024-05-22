@@ -46,13 +46,14 @@ Use the mouse to draw a rectangle around the area on your screen from which you 
 The text within the selected area will be extracted using OCR and automatically copied to your clipboard.
 
 **Dependencies**
+```bash
 Python 3.6+
 PyQt5 (for GUI)
 Pillow (for image processing)
 Pytesseract (Python wrapper for Tesseract OCR)
 OpenCV (for advanced image processing)
-Contributing
-
+```
+**Contributing**
 We welcome contributions! If you have suggestions for improvements or have found bugs, please open an issue or submit a pull request. Make sure to follow the contribution guidelines.
 
 **License**
@@ -61,6 +62,6 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 **Contact** 
 For any questions or feedback, feel free to reach out:
 
-Email: youremail@example.com
 GitHub: PawWin, Balon02
+
 Thank you for using Text Extractor! We hope it makes your text extraction tasks easier and more efficient.
