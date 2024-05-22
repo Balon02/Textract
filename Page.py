@@ -7,7 +7,7 @@ import pyperclip
 from PIL import ImageGrab
 
 
-pytesseract.pytesseract.tesseract_cmd = r''
+pytesseract.pytesseract.tesseract_cmd = r'' #path to tesseract.exe
 
 
 class Page:
