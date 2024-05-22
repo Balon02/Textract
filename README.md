@@ -1,7 +1,5 @@
 # Textract
 
-# Text Extractor
-
 ## Overview
 
 Text Extractor is a handy utility that allows users to select an area on their monitor and extract the text within that area. The extracted text is then automatically copied to the clipboard for immediate use. This tool is perfect for quickly capturing text from images, PDFs, videos, or any other on-screen content that isn't easily selectable.
