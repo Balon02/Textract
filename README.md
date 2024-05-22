@@ -64,4 +64,4 @@ For any questions or feedback, feel free to reach out:
 
 **GitHub:** PawWin, Balon02
 
-##Thank you for using Text Extractor! We hope it makes your text extraction tasks easier and more efficient.
+## Thank you for using Text Extractor! We hope it makes your text extraction tasks easier and more efficient.
