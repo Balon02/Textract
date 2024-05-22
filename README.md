@@ -26,7 +26,7 @@ Text Extractor is a handy utility that allows users to select an area on their m
     ```
 
 3. **Set up Tesseract OCR:**
-    Download and install Tesseract OCR from [here](https://github.com/tesseract-ocr/tesseract). Make sure to add Tesseract to your system path.
+    Download and install Tesseract OCR from [here](https://github.com/tesseract-ocr/tesseract). Make sure to add Tesseract to your system path and add it to the script in Page.py
 
 4. **Run the application:**
     ```bash
